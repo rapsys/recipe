@@ -1,8 +1,8 @@
 {
 	"bundles": {
-		"Rapsys\\UserBundle": ["all"]
+		"Rapsys\\UserBundle\\RapsysUserBundle": ["all"]
 	},
-	"copy-from-package": {
+	"copy-from-recipe": {
 		"config/": "%CONFIG_DIR%/"
 	}
 }
