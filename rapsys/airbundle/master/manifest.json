@@ -1,11 +1,11 @@
 {
-	"bundles": {
-		"Rapsys\\AirBundle\\RapsysAirBundle": ["all"]
-	},
-	"container": {
-		"locale": "en"
-	},
-	"copy-from-recipe": {
-		"config/": "%CONFIG_DIR%/"
-	}
+    "bundles": {
+        "Rapsys\\AirBundle\\RapsysAirBundle": ["all"]
+    },
+    "container": {
+        "locale": "en"
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
 }
