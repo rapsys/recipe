@@ -1,0 +1,11 @@
+{
+	"bundles": {
+		"Rapsys\\AirBundle": ["all"]
+	},
+	"container": {
+		"locale": "en"
+	},
+	"copy-from-package": {
+		"config/": "%CONFIG_DIR%/"
+	}
+}
