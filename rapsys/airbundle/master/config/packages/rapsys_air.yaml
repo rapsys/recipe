@@ -8,5 +8,8 @@ services:
     rapsys_air.twig.bb2html:
         class: Rapsys\AirBundle\Twig\Bb2htmlExtension
         tags: [ twig.extension ]
+    Rapsys\AirBundle\Controller\DefaultController:
+        arguments: [ '@service_container', '@translator' ]
+        tags: [ controller.service_arguments ]
     Rapsys\AirBundle\DataFixtures\AirFixtures:
         tags: [ doctrine.fixture.orm ]
