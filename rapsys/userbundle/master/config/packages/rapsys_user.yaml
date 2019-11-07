@@ -1,5 +1,6 @@
 services:
     Rapsys\UserBundle\Controller\DefaultController:
+        arguments: [ '@service_container', '@translator' ]
         tags: [ controller.service_arguments ]
     Rapsys\UserBundle\Utils\Slugger:
         arguments: [ "@service_container" ]
