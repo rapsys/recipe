@@ -1,18 +1,18 @@
 rapsys_user_login:
     path:     /login
-    defaults: { _controller: RapsysUserBundle:Default:login }
+    defaults: { _controller: Rapsys\UserBundle\Controller\DefaultController::login }
 
 rapsys_user_recover:
     path:     /recover
-    defaults: { _controller: RapsysUserBundle:Default:recover }
+    defaults: { _controller: Rapsys\UserBundle\Controller\DefaultController::recover }
 
 rapsys_user_recover_mail:
-    path:     /recover/{mail}/{hash}
-    defaults: { _controller: RapsysUserBundle:Default:recoverMail }
+    path:     /recover/{recipient}/{hash}
+    defaults: { _controller: Rapsys\UserBundle\Controller\DefaultController::recoverMail }
 
 rapsys_user_register:
     path:     /register
-    defaults: { _controller: RapsysUserBundle:Default:register }
+    defaults: { _controller: Rapsys\UserBundle\Controller\DefaultController::register }
 
 rapsys_user_logout:
     path:     /logout
