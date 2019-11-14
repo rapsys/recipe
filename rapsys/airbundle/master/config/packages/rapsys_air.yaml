@@ -1,15 +1,188 @@
+#RapsysAir configuration
+rapsys_air:
+    #Contact
+    contact:
+        name: 'Raphaël Gertz'
+        mail: 'airlibre@rapsys.eu'
+    #Copyright
+    copy:
+        long: 'Raphaël Gertz all rights reserved'
+        short: 'Copyright 2019'
+
+#RapsysUser configuration
+rapsys_user:
+    #Class replacement
+    class:
+        group: 'Rapsys\AirBundle\Entity\Group'
+        title: 'Rapsys\AirBundle\Entity\Title'
+        user: 'Rapsys\AirBundle\Entity\User'
+    #Route replacement
+    route:
+        homepage:
+            name: 'rapsys_air_homepage'
+    #Contact replacement
+    contact:
+        name: '%rapsys_air.contact.name%'
+        mail: '%rapsys_air.contact.mail%'
+    #Login replacement
+    login:
+        view:
+            name: '@RapsysAir/form/login.html.twig'
+            context:
+                title: 'Login'
+    #Recover replacement
+    recover:
+        view:
+            name: '@RapsysAir/form/recover.html.twig'
+            context:
+                title: 'Recover'
+        mail:
+            subject: '%%recipient_name%% welcome back to %%site_title%%'
+            html: '@RapsysAir/mail/recover.html.twig'
+            text: '@RapsysAir/mail/recover.text.twig'
+            route:
+                homepage: 'site_url'
+                recover_mail: 'recover_url'
+            context:
+                copy_long: '%rapsys_air.copy.long%'
+                copy_short: '%rapsys_air.copy.short%'
+                site_logo: '%rapsys_air.site.logo%'
+                site_title: '%rapsys_air.site.title%'
+    #Mail recover replacement
+    recover_mail:
+        view:
+            name: '@RapsysAir/form/recover_mail.html.twig'
+            context:
+                title: 'Mail recover'
+        mail:
+            subject: '%%recipient_name%% welcome back to %%site_title%%'
+            html: '@RapsysAir/mail/recover_mail.html.twig'
+            text: '@RapsysAir/mail/recover_mail.text.twig'
+            route:
+                homepage: 'site_url'
+                recover_mail: 'recover_url'
+            context:
+                copy_long: '%rapsys_air.copy.long%'
+                copy_short: '%rapsys_air.copy.short%'
+                site_logo: '%rapsys_air.site.logo%'
+                site_title: '%rapsys_air.site.title%'
+    #Register replacement
+    register:
+        view:
+            form: 'Rapsys\AirBundle\Form\RegisterType'
+            name: '@RapsysAir/form/register.html.twig'
+            context:
+                title: 'Register'
+        mail:
+            subject: '%%recipient_name%% welcome to %%site_title%%'
+            html: '@RapsysAir/mail/register.html.twig'
+            text: '@RapsysAir/mail/register.text.twig'
+            route:
+                homepage: 'site_url'
+            context:
+                copy_long: '%rapsys_air.copy.long%'
+                copy_short: '%rapsys_air.copy.short%'
+                site_logo: '%rapsys_air.site.logo%'
+                site_title: '%rapsys_air.site.title%'
+
+#Doctrine configuration
+doctrine:
+    #Orm configuration
+    orm:
+        #Force resolution of UserBundle entities to AirBundle one
+        #XXX: without these lines, relations are lookup in parent namespace ignoring AirBundle extension
+        resolve_target_entities:
+            Rapsys\UserBundle\Entity\Group: Rapsys\AirBundle\Entity\Group
+            Rapsys\UserBundle\Entity\Title: Rapsys\AirBundle\Entity\Title
+            Rapsys\UserBundle\Entity\User: Rapsys\AirBundle\Entity\User
+
+#Security configuration
+security:
+    #Set encoders
+    encoders:
+        #Rapsys\AirBundle\Entity\User: plaintext
+        Rapsys\AirBundle\Entity\User:
+            algorithm: 'bcrypt'
+
+    #Set providers
+    providers:
+        database:
+            entity:
+                class: Rapsys\AirBundle\Entity\User
+                property: mail
+
+    #Set firewall
+    firewalls:
+        #Disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            #Allow anonymous access
+            anonymous: ~
+
+            #Disable logout on user change
+            logout_on_user_change: true
+
+            #Activate database provider
+            provider: database
+
+            #XXX: https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+            #http_basic: ~
+
+            #Set form login
+            #XXX: https://symfony.com/doc/current/security/form_login_setup.html
+            form_login:
+                use_referer: false
+                login_path: rapsys_user_login
+                check_path: rapsys_user_login
+                username_parameter: 'login[mail]'
+                password_parameter: 'login[password]'
+
+            #Set logout route
+            logout:
+                path: /logout
+                target: /
+
+            #Set custom access denied handler
+            access_denied_handler: Rapsys\AirBundle\Security\AccessDeniedHandler
+
+    #Set role hierarchy
+    role_hierarchy:
+        ROLE_GUEST: [ 'ROLE_USER' ]
+        ROLE_REGULAR: [ 'ROLE_USER', 'ROLE_GUEST' ]
+        ROLE_SENIOR: [ 'ROLE_USER', 'ROLE_GUEST', 'ROLE_REGULAR' ]
+        ROLE_ADMIN: [ 'ROLE_USER', 'ROLE_GUEST', 'ROLE_REGULAR', 'ROLE_SENIOR' ]
+
+#Service configuration
 services:
+    #Register twig file_get_contents extension
+    #XXX: obsolete by email.image twig filter in "twig/extensions" or "twig/html-extra"
     rapsys_air.twig.file_get_contents:
         class: Rapsys\AirBundle\Twig\FileGetContentsExtension
-        tags: [ twig.extension ]
+        tags: [ 'twig.extension' ]
+    #Register twig base64 extension
     rapsys_air.twig.base64:
         class: Rapsys\AirBundle\Twig\Base64Extension
-        tags: [ twig.extension ]
+        tags: [ 'twig.extension' ]
+    #Register twig bb2html extension
     rapsys_air.twig.bb2html:
         class: Rapsys\AirBundle\Twig\Bb2htmlExtension
-        tags: [ twig.extension ]
+        tags: [ 'twig.extension' ]
+    #Register default controller
     Rapsys\AirBundle\Controller\DefaultController:
         arguments: [ '@service_container', '@translator' ]
-        tags: [ controller.service_arguments ]
+        autowire: true
+        tags: [ 'controller.service_arguments' ]
+    #Register access denied handler
+    Rapsys\AirBundle\Security\AccessDeniedHandler:
+        arguments: [ '@service_container', '@translator', '@twig' ]
+    #Register air fixtures
     Rapsys\AirBundle\DataFixtures\AirFixtures:
-        tags: [ doctrine.fixture.orm ]
+        tags: [ 'doctrine.fixture.orm' ]
+
+#Twig Configuration
+twig:
+    #Fix form layout for css
+    form_theme: [ '@RapsysAir/form/form_div_layout.html.twig' ]
