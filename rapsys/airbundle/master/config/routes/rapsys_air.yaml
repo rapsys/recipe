@@ -1,17 +1,21 @@
 rapsys_air_homepage:
-    path:     /
-    defaults: { _controller: 'Rapsys\AirBundle\Controller\DefaultController::index' }
-
-rapsys_air_admin:
-    path:     /admin
-    defaults: { _controller: 'Rapsys\AirBundle\Controller\DefaultController::admin' }
+    path: /
+    controller: Rapsys\AirBundle\Controller\DefaultController::index
+    methods: GET
 
 rapsys_air_contact:
-    path:     /contact
-    defaults: { _controller: 'Rapsys\AirBundle\Controller\DefaultController::contact' }
+    path: /contact
+    controller: Rapsys\AirBundle\Controller\DefaultController::contact
+    methods: GET|POST
+
+rapsys_air_admin:
+    path: /admin
+    controller: Rapsys\AirBundle\Controller\DefaultController::admin
+    methods: GET
 
 rapsys_air_session:
     path:     /admin/session/{id}
-    defaults: { _controller: 'Rapsys\AirBundle\Controller\DefaultController::session' }
+    controller: Rapsys\AirBundle\Controller\DefaultController::session
     requirements:
         id: '\d+'
+    methods: GET
