@@ -3,6 +3,7 @@
 		"Rapsys\\UserBundle\\RapsysUserBundle": ["all"]
 	},
 	"copy-from-package": {
-		"Resources/config/": "%CONFIG_DIR%/"
+		"Resources/config/packages/rapsys_user.yaml": "%CONFIG_DIR%/packages/rapsys_user.yaml",
+		"Resources/config/routes/rapsys_user.yaml": "%CONFIG_DIR%/routes/rapsys_user.yaml"
 	}
 }

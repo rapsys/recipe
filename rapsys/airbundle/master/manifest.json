@@ -1,11 +1,17 @@
 {
 	"bundles": {
-		"Rapsys\\AirBundle\\RapsysAirBundle": ["all"]
+		"Rapsys\\AirBundle\\RapsysAirBundle": ["all"],
+		"Doctrine\\Bundle\\FixturesBundle": ["dev"],
+		"Symfony\\Component\\BrowserKit": ["dev"],
+		"Symfony\\Bundle\\MakerBundle": ["dev"],
+		"Symfony\\Bridge\\PhpUnit": ["dev"],
+		"Symfony\\Bundle\\WebProfilerBundle": ["dev"]
 	},
 	"container": {
 		"locale": "en"
 	},
 	"copy-from-package": {
-		"Resources/config/": "%CONFIG_DIR%/"
+		"Resources/config/packages/rapsys_air.yaml": "%CONFIG_DIR%/packages/rapsys_air.yaml",
+		"Resources/config/routes/rapsys_air.yaml": "%CONFIG_DIR%/routes/rapsys_air.yaml"
 	}
 }

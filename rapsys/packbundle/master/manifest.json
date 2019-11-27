@@ -3,6 +3,6 @@
 		"Rapsys\\PackBundle\\RapsysPackBundle": ["all"]
 	},
 	"copy-from-package": {
-		"Resources/config/": "%CONFIG_DIR%/"
+		"Resources/config/packages/rapsys_pack.yaml": "%CONFIG_DIR%/packages/rapsys_pack.yaml"
 	}
 }
