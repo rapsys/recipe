@@ -1,11 +1,6 @@
 {
 	"bundles": {
-		"Rapsys\\AirBundle\\RapsysAirBundle": ["all"],
-		"Doctrine\\Bundle\\FixturesBundle": ["dev"],
-		"Symfony\\Component\\BrowserKit": ["dev"],
-		"Symfony\\Bundle\\MakerBundle": ["dev"],
-		"Symfony\\Bridge\\PhpUnit": ["dev"],
-		"Symfony\\Bundle\\WebProfilerBundle": ["dev"]
+		"Rapsys\\AirBundle\\RapsysAirBundle": ["all"]
 	},
 	"container": {
 		"locale": "en"
