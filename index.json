@@ -1,4 +1,5 @@
 {
+	"aliases": [],
 	"recipes": {
 		"rapsys/airbundle": [
 			"master"
@@ -13,11 +14,13 @@
 			"master"
 		]
 	},
+	"versions": [],
 	"branch": "master",
 	"is_contrib": true,
 	"_links": {
 		"repository": "rapsys@git.rapsys.eu/recipes",
 		"origin_template": "{package}:{version}@git.rapsys.eu/recipes:master",
-		"recipe_template": "https://git.rapsys.eu/recipes/blob_plain/HEAD:/{package}/{version}/manifest.json"
+		"recipe_template": "https://git.rapsys.eu/recipes/blob_plain/HEAD:/{package}/{version}/manifest.json",
+		"recipe_template_relative": "{package}/{version}/manifest.json"
 	}
 }
