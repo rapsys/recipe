@@ -3,6 +3,15 @@
 		"Rapsys\\PackBundle\\RapsysPackBundle": ["all"]
 	},
 	"copy-from-package": {
-		"Resources/config/packages/rapsys_pack.yaml": "%CONFIG_DIR%/packages/rapsys_pack.yaml"
-	}
+		"Resources/config/packages/rapsyspack.yaml": "%CONFIG_DIR%/packages/rapsyspack.yaml",
+		"Resources/config/routes/rapsyspack.yaml": "%CONFIG_DIR%/routes/rapsyspack.yaml"
+	},
+	"env": {
+		"#1": "Shuffled printable character range",
+		"#2": "XXX: Use value from `php bin/console rapsyspack:range`",
+		"RAPSYSPACK_RANGE": "Ch4ng3m3!"
+	},
+	"post-install-output": [
+		"  * Set your RAPSYSPACK_RANGE config in <fg=green>.env.local</>"
+	]
 }
