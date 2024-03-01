@@ -2,13 +2,16 @@
 	"bundles": {
 		"Rapsys\\PackBundle\\RapsysPackBundle": ["all"]
 	},
+	"composer-scripts": {
+		"rapsyspack:range": "symfony-cmd"
+	},
 	"copy-from-package": {
 		"Resources/config/packages/rapsyspack.yaml": "%CONFIG_DIR%/packages/rapsyspack.yaml",
 		"Resources/config/routes/rapsyspack.yaml": "%CONFIG_DIR%/routes/rapsyspack.yaml"
 	},
 	"env": {
 		"#1": "Shuffled printable character range",
-		"#2": "XXX: Use value from `php bin/console rapsyspack:range`",
+		"#2": "XXX: Run \"php bin/console rapsyspack:range\" to generate a range",
 		"RAPSYSPACK_RANGE": "Ch4ng3m3!"
 	},
 	"post-install-output": [
