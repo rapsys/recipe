@@ -1,0 +1,23 @@
+{
+	"recipes": {
+		"rapsys/airbundle": [
+			"master"
+		],
+		"rapsys/blogbundle": [
+			"master"
+		],
+		"rapsys/packbundle": [
+			"master"
+		],
+		"rapsys/userbundle": [
+			"master"
+		]
+	},
+	"branch": "master",
+	"is_contrib": true,
+	"_links": {
+		"repository": "rapsys@git.rapsys.eu/recipes",
+		"origin_template": "{package}:{version}@git.rapsys.eu/recipes:master",
+		"recipe_template": "https://git.rapsys.eu/recipes/blob_plain/HEAD:/{package}/{version}/manifest.json"
+	}
+}
