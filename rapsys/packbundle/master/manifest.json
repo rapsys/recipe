@@ -10,9 +10,19 @@
 		"Resources/config/routes/rapsyspack.yaml": "%CONFIG_DIR%/routes/rapsyspack.yaml"
 	},
 	"env": {
-		"#1": "Shuffled printable character range",
-		"#2": "XXX: Run \"php bin/console rapsyspack:range\" to generate a range",
-		"RAPSYSPACK_RANGE": "Ch4ng3m3!"
+		"#1": "User agent",
+		"RAPSYSPACK_AGENT": "rapsyspack/Ch4ng3m3!",
+		"#2": "Hostname",
+		"RAPSYSPACK_HOSTNAME": "Ch4ng3m3!",
+		"#3": "Shuffled printable character range",
+		"#4": "XXX: Run \"php bin/console rapsyspack:range\" to generate a range",
+		"RAPSYSPACK_RANGE": "Ch4ng3m3!",
+		"#5": "Redirect (number of redirects to follow, cast as int)",
+		"RAPSYSPACK_REDIRECT": 20,
+		"#6": "Scheme",
+		"RAPSYSPACK_SCHEME": "https://",
+		"#7": "Timeout (0 for infinite, cast as float)",
+		"RAPSYSPACK_TIMEOUT": 60
 	},
 	"post-install-output": [
 		"  * Set your RAPSYSPACK_RANGE config in <fg=green>.env.local</>"
