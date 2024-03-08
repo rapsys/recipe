@@ -12,16 +12,14 @@
 	"env": {
 		"#1": "User agent",
 		"RAPSYSPACK_AGENT": "rapsyspack/Ch4ng3m3!",
-		"#2": "Hostname",
-		"RAPSYSPACK_HOSTNAME": "Ch4ng3m3!",
-		"#3": "Shuffled printable character range",
-		"#4": "XXX: Run \"php bin/console rapsyspack:range\" to generate a range",
+		"#2": "Shuffled printable character range",
+		"#3": "XXX: Run \"php bin/console rapsyspack:range\" to generate a range",
 		"RAPSYSPACK_RANGE": "Ch4ng3m3!",
-		"#5": "Redirect (number of redirects to follow, cast as int)",
+		"#4": "Redirect (number of redirects to follow, cast as int)",
 		"RAPSYSPACK_REDIRECT": 20,
-		"#6": "Scheme",
-		"RAPSYSPACK_SCHEME": "https://",
-		"#7": "Timeout (0 for infinite, cast as float)",
+		"#5": "Scheme",
+		"RAPSYSPACK_SCHEME": "https",
+		"#6": "Timeout (0 for infinite, cast as float)",
 		"RAPSYSPACK_TIMEOUT": 60
 	},
 	"post-install-output": [
