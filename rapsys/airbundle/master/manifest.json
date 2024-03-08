@@ -2,11 +2,26 @@
 	"bundles": {
 		"Rapsys\\AirBundle\\RapsysAirBundle": ["all"]
 	},
-	"container": {
-		"locale": "en"
-	},
 	"copy-from-package": {
-		"Resources/config/packages/rapsys_air.yaml": "%CONFIG_DIR%/packages/rapsys_air.yaml",
-		"Resources/config/routes/rapsys_air.yaml": "%CONFIG_DIR%/routes/rapsys_air.yaml"
-	}
+		"Resources/config/packages/rapsysair.yaml": "%CONFIG_DIR%/packages/rapsysair.yaml",
+		"Resources/config/routes/rapsysair.yaml": "%CONFIG_DIR%/routes/rapsysair.yaml"
+	},
+	"env": {
+		"#1": "Google client",
+		"RAPSYSAIR_GOOGLE_CLIENT": "Ch4ng3m3!",
+		"#2": "Google project",
+		"RAPSYSAIR_GOOGLE_PROJECT": "Ch4ng3m3!",
+		"#3": "Gootle secret",
+		"RAPSYSAIR_GOOGLE_SECRET": "Ch4ng3m3!",
+		"#4": "Hostname",
+		"RAPSYSAIR_HOSTNAME": "Ch4ng3m3!",
+		"#5": "Scheme",
+		"RAPSYSPACK_SCHEME": "https"
+	},
+	"post-install-output": [
+		"  * Set your RAPSYSAIR_GOOGLE_CLIENT config in <fg=green>.env.local</>",
+		"  * Set your RAPSYSAIR_GOOGLE_PROJECT config in <fg=green>.env.local</>",
+		"  * Set your RAPSYSAIR_GOOGLE_SECRET config in <fg=green>.env.local</>",
+		"  * Set your RAPSYSAIR_HOSTNAME config in <fg=green>.env.local</>"
+	]
 }
