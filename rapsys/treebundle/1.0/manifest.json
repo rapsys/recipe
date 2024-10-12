@@ -1,0 +1,16 @@
+{
+	"manifests": {
+		"rapsys/treebundle": {
+			"manifest": {
+				"bundles": {
+					"Rapsys\\TreeBundle\\RapsysTreeBundle": ["all"]
+				},
+				"copy-from-package": {
+					"Resources/config/packages/rapsystree.yaml": "%CONFIG_DIR%/packages/rapsystree.yaml",
+					"Resources/config/routes/rapsystree.yaml": "%CONFIG_DIR%/routes/rapsystree.yaml"
+				}
+			},
+			"ref": "3e10bf3c509babd721e38f0a81d14caa7daa4d03"
+		}
+	}
+}
