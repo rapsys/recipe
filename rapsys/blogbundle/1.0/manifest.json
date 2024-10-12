@@ -1,0 +1,17 @@
+{
+	"manifests": {
+		"rapsys/blogbundle": {
+			"manifest": {
+				"aliases": [ "blog" ],
+				"bundles": {
+					"Rapsys\\BlogBundle\\RapsysBlogBundle": [ "all" ]
+				},
+				"copy-from-package": {
+					"Resources/config/packages/rapsysblog.yaml": "%CONFIG_DIR%/packages/rapsysblog.yaml",
+					"Resources/config/routes/rapsysblog.yaml": "%CONFIG_DIR%/routes/rapsysblog.yaml"
+				}
+			},
+			"ref": "ef647591c956c6114a77a846d7153d6ff782ae14"
+		}
+	}
+}
