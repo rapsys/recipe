@@ -18,7 +18,7 @@
 	},
 	"versions": [],
 	"branch": "master",
-	"is_contrib": true,
+	"is_contrib": false,
 	"_links": {
 		"repository": "rapsys@git.rapsys.eu/recipes",
 		"origin_template": "{package}:{version}@git.rapsys.eu/recipes:master",
