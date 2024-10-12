@@ -2,8 +2,9 @@
 	"manifests": {
 		"rapsys/treebundle": {
 			"manifest": {
+				"aliases": [ "tree" ],
 				"bundles": {
-					"Rapsys\\TreeBundle\\RapsysTreeBundle": ["all"]
+					"Rapsys\\TreeBundle\\RapsysTreeBundle": [ "all" ]
 				},
 				"copy-from-package": {
 					"Resources/config/packages/rapsystree.yaml": "%CONFIG_DIR%/packages/rapsystree.yaml",

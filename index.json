@@ -1,11 +1,4 @@
 {
-	"aliases": [
-		"rapsysair": "rapsys/airbundle",
-		"rapsysblog": "rapsys/blogbundle",
-		"rapsyspack": "rapsys/packbundle",
-		"rapsystree": "rapsys/treebundle",
-		"rapsysuser": "rapsys/userbundle"
-	],
 	"recipes": {
 		"rapsys/airbundle": [
 			"1.0"

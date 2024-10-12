@@ -1,9 +1,17 @@
 {
-	"bundles": {
-		"Rapsys\\UserBundle\\RapsysUserBundle": ["all"]
-	},
-	"copy-from-package": {
-		"Resources/config/packages/rapsysuser.yaml": "%CONFIG_DIR%/packages/rapsysuser.yaml",
-		"Resources/config/routes/rapsysuser.yaml": "%CONFIG_DIR%/routes/rapsysuser.yaml"
+	"manifests": {
+		"rapsys/userbundle": {
+			"manifest": {
+				"aliases": [ "user" ],
+				"bundles": {
+					"Rapsys\\UserBundle\\RapsysUserBundle": [ "all" ]
+				},
+				"copy-from-package": {
+					"Resources/config/packages/rapsysuser.yaml": "%CONFIG_DIR%/packages/rapsysuser.yaml",
+					"Resources/config/routes/rapsysuser.yaml": "%CONFIG_DIR%/routes/rapsysuser.yaml"
+				}
+			},
+			"ref": "e1a4c1a9d9892aca34f825793ccb16da5e2ee989"
+		}
 	}
 }

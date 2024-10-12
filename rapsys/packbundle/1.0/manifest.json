@@ -1,28 +1,36 @@
 {
-	"bundles": {
-		"Rapsys\\PackBundle\\RapsysPackBundle": ["all"]
-	},
-	"composer-scripts": {
-		"rapsyspack:range": "symfony-cmd"
-	},
-	"copy-from-package": {
-		"Resources/config/packages/rapsyspack.yaml": "%CONFIG_DIR%/packages/rapsyspack.yaml",
-		"Resources/config/routes/rapsyspack.yaml": "%CONFIG_DIR%/routes/rapsyspack.yaml"
-	},
-	"env": {
-		"#1": "User agent",
-		"RAPSYSPACK_AGENT": "rapsyspack/Ch4ng3m3!",
-		"#2": "Shuffled printable character range",
-		"#3": "XXX: Run \"php bin/console rapsyspack:range\" to generate a range",
-		"RAPSYSPACK_RANGE": "Ch4ng3m3!",
-		"#4": "Redirect (number of redirects to follow, cast as int)",
-		"RAPSYSPACK_REDIRECT": 20,
-		"#5": "Scheme",
-		"RAPSYSPACK_SCHEME": "https",
-		"#6": "Timeout (0 for infinite, cast as float)",
-		"RAPSYSPACK_TIMEOUT": 60
-	},
-	"post-install-output": [
-		"  * Set your RAPSYSPACK_RANGE config in <fg=green>.env.local</>"
-	]
+	"manifests": {
+		"rapsys/packbundle": {
+			"manifest": {
+				"aliases": [ "pack" ],
+				"bundles": {
+					"Rapsys\\PackBundle\\RapsysPackBundle": [ "all" ]
+				},
+				"composer-scripts": {
+					"rapsyspack:range": "symfony-cmd"
+				},
+				"copy-from-package": {
+					"Resources/config/packages/rapsyspack.yaml": "%CONFIG_DIR%/packages/rapsyspack.yaml",
+					"Resources/config/routes/rapsyspack.yaml": "%CONFIG_DIR%/routes/rapsyspack.yaml"
+				},
+				"env": {
+					"#1": "User agent",
+					"RAPSYSPACK_AGENT": "rapsyspack/Ch4ng3m3!",
+					"#2": "Shuffled printable character range",
+					"#3": "XXX: Run \"php bin/console rapsyspack:range\" to generate a range",
+					"RAPSYSPACK_RANGE": "Ch4ng3m3!",
+					"#4": "Redirect (number of redirects to follow, cast as int)",
+					"RAPSYSPACK_REDIRECT": 20,
+					"#5": "Scheme",
+					"RAPSYSPACK_SCHEME": "https",
+					"#6": "Timeout (0 for infinite, cast as float)",
+					"RAPSYSPACK_TIMEOUT": 60
+				},
+				"post-install-output": [
+					"  * Set your RAPSYSPACK_RANGE config in <fg=green>.env.local</>"
+				]
+			},
+			"ref": "673c286fd17382f5e8940166ae7d3ce437afd941"
+		}
+	}
 }
