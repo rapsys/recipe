@@ -2,7 +2,7 @@
 	"manifests": {
 		"rapsys/treebundle": {
 			"manifest": {
-				"aliases": [ "tree" ],
+				"aliases": [ "rapsys/tree", "rapsystree" ],
 				"bundles": {
 					"Rapsys\\TreeBundle\\RapsysTreeBundle": [ "all" ]
 				},

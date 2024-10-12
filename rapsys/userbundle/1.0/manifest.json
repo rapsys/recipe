@@ -2,7 +2,7 @@
 	"manifests": {
 		"rapsys/userbundle": {
 			"manifest": {
-				"aliases": [ "user" ],
+				"aliases": [ "rapsys/user", "rapsysuser" ],
 				"bundles": {
 					"Rapsys\\UserBundle\\RapsysUserBundle": [ "all" ]
 				},

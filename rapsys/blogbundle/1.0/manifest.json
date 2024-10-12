@@ -2,7 +2,7 @@
 	"manifests": {
 		"rapsys/blogbundle": {
 			"manifest": {
-				"aliases": [ "blog" ],
+				"aliases": [ "rapsys/blog", "rapsysblog" ],
 				"bundles": {
 					"Rapsys\\BlogBundle\\RapsysBlogBundle": [ "all" ]
 				},

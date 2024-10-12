@@ -2,7 +2,7 @@
 	"manifests": {
 		"rapsys/airbundle": {
 			"manifest": {
-				"aliases": [ "air" ],
+				"aliases": [ "rapsys/air", "rapsysair" ],
 				"bundles": {
 					"Rapsys\\AirBundle\\RapsysAirBundle": [ "all" ]
 				},

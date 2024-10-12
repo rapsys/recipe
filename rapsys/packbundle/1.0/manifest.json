@@ -2,7 +2,7 @@
 	"manifests": {
 		"rapsys/packbundle": {
 			"manifest": {
-				"aliases": [ "pack" ],
+				"aliases": [ "rapsys/pack", "rapsyspack" ],
 				"bundles": {
 					"Rapsys\\PackBundle\\RapsysPackBundle": [ "all" ]
 				},
