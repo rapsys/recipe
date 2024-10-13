@@ -6,9 +6,6 @@
 				"bundles": {
 					"Rapsys\\PackBundle\\RapsysPackBundle": [ "all" ]
 				},
-				"composer-scripts": {
-					"rapsyspack:range": "symfony-cmd"
-				},
 				"copy-from-package": {
 					"Resources/config/packages/rapsyspack.yaml": "%CONFIG_DIR%/packages/rapsyspack.yaml",
 					"Resources/config/routes/rapsyspack.yaml": "%CONFIG_DIR%/routes/rapsyspack.yaml"
@@ -27,10 +24,11 @@
 					"RAPSYSPACK_TIMEOUT": 60
 				},
 				"post-install-output": [
-					"  * Set your RAPSYSPACK_RANGE config in <fg=green>.env.local</>"
+					"  * Set your RAPSYSPACK_RANGE config in <fg=green>.env.local</>",
+					"  * XXX: Run \"php bin/console rapsyspack:range\" to generate a range"
 				]
 			},
-			"ref": "673c286fd17382f5e8940166ae7d3ce437afd941"
+			"ref": "22a856fa86e544c5930b638df0fdce9ad25b2f0b"
 		}
 	}
 }
